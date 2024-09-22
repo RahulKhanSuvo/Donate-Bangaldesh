@@ -40,3 +40,12 @@ function evenDonationHandler(
   `;
   historyList.insertBefore(div, historyList.firstChild);
 }
+function forValidation(event, btnId) {
+  const value = event.target.value;
+  const button = document.getElementById(btnId);
+  if (isNaN(value) || value < 0) {
+    button.removeAttribute("onclick", "my_modal_5.showModal()");
+  } else {
+    button.setAttribute("onclick", "my_modal_5.showModal()");
+  }
+}
