@@ -49,11 +49,11 @@
         <section class="grid grid-cols-1 gap-8 mb-20">
             <!-- card 1 -->
             <div class="flex gap-8 p-8 border rounded-2xl">
-                <img class=" w-full flex-1" src="./assets/noakhali.png" alt="Movie" />
+                <img class=" w-full flex-1 rounded-xl" src="./assets/noakhali.png" alt="" />
                 <div class=" flex-1  w-full flex flex-col justify-between">
                     <div class="flex rounded-lg  w-fit items-center px-4 py-3 bg-[#1111110D] gap-2">
                         <img src="./assets/coin.png" alt="">
-                        <p class="font-normal"><span>0</span> BDT</p>
+                        <p class="font-normal"><span id="noakhail-donation">0</span> BDT</p>
                     </div>
 
                     <div>
@@ -72,13 +72,14 @@
                     </div>
 
                     <div class="mt-auto">
-                        <input class="w-full rounded-lg p-4 mt-6 border" type="text"
-                            placeholder="Write Donation Amount">
+                        <input class="w-full rounded-lg p-4 mt-6 border" type="text" placeholder="Write Donation Amount"
+                            id="noakhail-input">
                     </div>
 
                     <div class="card-actions justify-center mt-4">
                         <button
-                            class="px-8 rounded-lg py-4 w-full font-semibold text-base text-black bg-[#B4F461] border">Donate</button>
+                            class="px-8 rounded-lg py-4 w-full font-semibold text-base text-black bg-[#B4F461] border transition duration-300 hover:bg-[#a3e659] focus:outline-none focus:ring-2 focus:ring-[#B4F461]"
+                            id="noakhail-btn">Donate</button>
                     </div>
                 </div>
             </div>
@@ -116,7 +117,7 @@
 
                     <div class="card-actions justify-center mt-4">
                         <button
-                            class="px-8 rounded-lg py-4 w-full font-semibold text-base text-black bg-[#B4F461] border">Donate</button>
+                            class="px-8 rounded-lg py-4 w-full font-semibold text-base text-black bg-[#B4F461] border transition duration-300 hover:bg-[#a3e659] focus:outline-none focus:ring-2 focus:ring-[#B4F461]">Donate</button>
                     </div>
                 </div>
             </div>
@@ -155,11 +156,12 @@
 
                     <div class="card-actions justify-center mt-4">
                         <button
-                            class="px-8 rounded-lg py-4 w-full font-semibold text-base text-black bg-[#B4F461] border">Donate</button>
+                            class="px-8 rounded-lg py-4 w-full font-semibold text-base text-black bg-[#B4F461] border transition duration-300 hover:bg-[#a3e659] focus:outline-none focus:ring-2 focus:ring-[#B4F461]">Donate</button>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- history section -->
         <section class="max-w-screen-xl md:mx-auto">
             <div id="history-list grid grid-cols-1 gap-6"></div>
@@ -169,4 +171,4 @@
     <script src="./js/index.js"></script>
 </body>
 
-</html>
+</html
