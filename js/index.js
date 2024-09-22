@@ -65,3 +65,6 @@ donationBtn.addEventListener("click", function () {
   historyList.classList.add("hidden");
   historyHI.classList.remove("h-[60vh]");
 });
+document.getElementById("blog-btn").addEventListener("click", function () {
+  window.location.href = "Blog.html";
+});

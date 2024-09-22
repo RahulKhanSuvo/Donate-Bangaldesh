@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -9,8 +9,29 @@
     <title>Blog</title>
 </head>
 
-<body class="bg-gray-100 p-4 md:p-10">
-    <div class="max-w-4xl mx-auto">
+<body class="bg-gray-100">
+
+    <!-- Header Section -->
+    <header class=" sticky  top-0  ">
+        <!-- nav here -->
+        <div class="bg-[#F9F7F3] backdrop-blur-sm pt-6 bg-opacity-95 ">
+            <nav
+                class="max-w-screen-xl md:mx-auto  justify-between flex-col-reverse lg:flex-row flex  gap-4 pb-12 items-center">
+                <button id="home-btn" class="px-8 rounded-lg py-3 font-semibold text-base bg-[#B4F461]">Home</button>
+                <div class="flex items-center gap-4">
+                    <img src="./assets/logo.png" alt="">
+                    <h1 class="font-semibold text-base">Donate Bangladesh</h1>
+                </div>
+                <div class="flex items-center gap-3 ">
+                    <img class="h-12 w-12" src="./assets/coin.png" alt="">
+                    <h3 class="font-medium text-[#111111B3] text-base"><span id="coin">5500</span> BDT</h3>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Content -->
+    <div class="max-w-4xl mx-auto p-4 md:p-10">
         <div class="collapse collapse-arrow bg-base-200 mb-4 rounded-lg">
             <input type="radio" name="my-accordion-2" checked="checked" />
             <div class="collapse-title text-xl font-medium">
@@ -33,9 +54,9 @@
             </div>
             <div class="collapse-content">
                 <p>
-                    You can select an element from the DOM using methods like `document.getElementById()`,
+                    I can select an element from the DOM using methods like `document.getElementById()`,
                     `document.getElementsByClassName()`, `document.querySelector()`, or `document.querySelectorAll()`.
-                    These methods help you find elements by ID, class name, tag name, or a CSS selector.
+                    These methods help me find elements by ID, class name, tag name, or a CSS selector.
                 </p>
             </div>
         </div>
@@ -62,7 +83,7 @@
             </div>
             <div class="collapse-content">
                 <p>
-                    You can manipulate an element's attributes using methods like `setAttribute()` and `getAttribute()`.
+                    I can manipulate an element's attributes using methods like `setAttribute()` and `getAttribute()`.
                     To change styles, you can modify the element's `style` property directly, or add/remove classes
                     using
                     `classList.add()`, `classList.remove()`, or `classList.toggle()`.
@@ -70,7 +91,11 @@
             </div>
         </div>
     </div>
-
+    <script>
+        document.getElementById("home-btn").addEventListener("click", function () {
+            window.location.href = "index.html";
+        });
+    </script>
 </body>
 
 </html>
