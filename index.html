@@ -18,6 +18,17 @@
         }
     </style>
     <title>Donate Bangladesh</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lime: '#B4F461',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body class="">
@@ -39,14 +50,15 @@
         <!-- toggling btn -->
         <div class="bg-white backdrop-blur-xl bg-opacity-80">
             <section class="flex   gap-4 justify-center pt-8 pb-6 ">
-                <button class="px-8 rounded-lg py-4 font-semibold text-base bg-[#B4F461]">Donation</button>
-                <button class="px-8 rounded-lg py-4 font-semibold text-base bg-white border ">History</button>
+                <button id="donation-btn"
+                    class="px-8 rounded-lg py-4 font-semibold border text-base bg-lime ">Donation</button>
+                <button id="history-btn" class="px-8 rounded-lg py-4 font-semibold text-base  border ">History</button>
             </section>
         </div>
     </header>
     <main class="max-w-screen-xl md:mx-auto">
         <!-- donation cart section  -->
-        <section class="grid grid-cols-1 gap-8 mb-20">
+        <section id="donation-card" class="grid grid-cols-1 gap-8 mb-20">
             <!-- card 1 -->
             <div class="flex gap-8 p-8 border rounded-2xl">
                 <img class=" w-full flex-1 rounded-xl" src="./assets/noakhali.png" alt="" />
@@ -57,7 +69,8 @@
                     </div>
 
                     <div>
-                        <h2 class="font-bold text-lg my-5">Donate for Flood at Noakhali, Bangladesh</h2>
+                        <h2 id="noakhail-title" class="font-bold text-lg my-5">Donate for Flood at Noakhali, Bangladesh
+                        </h2>
                         <p class="font-light text-[#111111B3]">The recent floods in Noakhali have caused significant
                             damage to
                             homes and
@@ -77,10 +90,9 @@
                     </div>
 
                     <div class="card-actions justify-center mt-4">
-                        <button "
-                            class=" px-8 rounded-lg py-4 w-full font-semibold text-base text-black bg-[#B4F461] border
-                            transition duration-300 hover:bg-[#a3e659] focus:outline-none focus:ring-2
-                            focus:ring-[#B4F461]" id="noakhail-btn">Donate</button>
+                        <button
+                            class="px-8 rounded-lg py-4 w-full font-semibold text-base text-black bg-[#B4F461] border transition duration-300 hover:bg-[#a3e659] focus:outline-none focus:ring-2 focus:ring-[#B4F461]"
+                            id="noakhail-btn">Donate</button>
                     </div>
 
                     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
@@ -180,7 +192,9 @@
 
         <!-- history section -->
         <section class="max-w-screen-xl md:mx-auto">
-            <div id="history-list grid grid-cols-1 gap-6"></div>
+            <div id="history-list" class="hidden grid grid-cols-1 gap-6">
+
+            </div>
         </section>
     </main>
     <footer class="bg-[#F9F7F3] h-28"></footer>

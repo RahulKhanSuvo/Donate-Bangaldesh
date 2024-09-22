@@ -7,20 +7,36 @@ function getValueOfSpan(id) {
 function setInnerText(id, value) {
   document.getElementById(id).innerText = value;
 }
-function evenDonationHandler(btnId, inputId, counterId, totalBallanceId) {
+function evenDonationHandler(
+  btnId,
+  inputId,
+  counterId,
+  totalBallanceId,
+  donationTitleId,
+  historyId
+) {
   const donation = getValueOfInput(inputId);
   const donationCounter = getValueOfSpan(counterId);
   const coin = getValueOfSpan(totalBallanceId);
-
+  const button = document.getElementById(btnId);
+  button.setAttribute("onclick", "my_modal_5.showModal()");
   if (isNaN(donation) || donation <= 0) {
     alert("invalid input please provide a number");
-
+    button.removeAttribute("onclick", "my_modal_5.showModal()");
     return;
-  } else {
   }
-
   const newCoin = coin - donation;
   const newDonation = donationCounter + donation;
   setInnerText(counterId, newDonation);
   setInnerText(totalBallanceId, newCoin);
+  const title = document.getElementById(donationTitleId).innerText;
+  const historyList = document.getElementById(historyId);
+  const div = document.createElement("div");
+  const currentDate = new Date().toString();
+  div.classList.add("p-8", "border", "rounded-xl");
+  div.innerHTML = `
+    <h3 class="text-xl font-bold pb-4 ">${donation} Taka is ${title} </h3>
+    <p class="font-light text-base "> Date : ${currentDate}</p>
+  `;
+  historyList.insertBefore(div, historyList.firstChild);
 }

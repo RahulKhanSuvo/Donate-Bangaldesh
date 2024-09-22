@@ -1,27 +1,12 @@
-function getValueOfInput(id) {
-  return parseFloat(document.getElementById(id).value);
-}
-function getValueOfSpan(id) {
-  return parseFloat(document.getElementById(id).innerText);
-}
-function setInnerText(id, value) {
-  document.getElementById(id).innerText = value;
-}
 document.getElementById("noakhail-btn").addEventListener("click", function () {
-  const donation = getValueOfInput("noakhail-input");
-  const donationCounter = getValueOfSpan("noakhail-donation");
-  const coin = getValueOfSpan("coin");
-
-  const button = document.getElementById("noakhail-btn");
-  if (isNaN(donation) || donation <= 0) {
-    alert("invalid input please provide a number");
-    button.removeAttribute("onclick", "my_modal_5.showModal()");
-    return;
-  }
-  const newCoin = coin - donation;
-  const newDonation = donationCounter + donation;
-  setInnerText("noakhail-donation", newDonation);
-  setInnerText("coin", newCoin);
+  evenDonationHandler(
+    "noakhail-btn",
+    "noakhail-input",
+    "noakhail-donation",
+    "coin",
+    "noakhail-title",
+    "history-list"
+  );
 });
 document
   .getElementById("noakhail-input")
@@ -34,3 +19,21 @@ document
       button.setAttribute("onclick", "my_modal_5.showModal()");
     }
   });
+// toggle
+const historyBtn = document.getElementById("history-btn");
+const donationCard = document.getElementById("donation-card");
+const donationBtn = document.getElementById("donation-btn");
+const historyList = document.getElementById("history-list");
+
+historyBtn.addEventListener("click", function () {
+  historyBtn.classList.add("bg-lime");
+  donationCard.classList.add("hidden");
+  donationBtn.classList.remove("bg-lime");
+  historyList.classList.remove("hidden");
+});
+donationBtn.addEventListener("click", function () {
+  historyBtn.classList.remove("bg-lime");
+  donationBtn.classList.add("bg-lime");
+  donationCard.classList.remove("hidden");
+  historyList.classList.add("hidden");
+});
