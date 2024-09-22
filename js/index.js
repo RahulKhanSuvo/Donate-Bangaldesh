@@ -11,7 +11,7 @@ document.getElementById("noakhail-btn").addEventListener("click", function () {
   const donation = getValueOfInput("noakhail-input");
   const donationCounter = getValueOfSpan("noakhail-donation");
   const coin = getValueOfSpan("coin");
-  console.log(coin);
+
   const button = document.getElementById("noakhail-btn");
   if (isNaN(donation) || donation <= 0) {
     alert("invalid input please provide a number");
