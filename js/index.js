@@ -49,16 +49,19 @@ const historyBtn = document.getElementById("history-btn");
 const donationCard = document.getElementById("donation-card");
 const donationBtn = document.getElementById("donation-btn");
 const historyList = document.getElementById("history-list");
+const historyHI = document.getElementById("history-hi");
 
 historyBtn.addEventListener("click", function () {
   historyBtn.classList.add("bg-lime");
   donationCard.classList.add("hidden");
   donationBtn.classList.remove("bg-lime");
   historyList.classList.remove("hidden");
+  historyHI.classList.add("h-[60vh]");
 });
 donationBtn.addEventListener("click", function () {
   historyBtn.classList.remove("bg-lime");
   donationBtn.classList.add("bg-lime");
   donationCard.classList.remove("hidden");
   historyList.classList.add("hidden");
+  historyHI.classList.remove("h-[60vh]");
 });
