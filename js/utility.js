@@ -27,6 +27,11 @@ function evenDonationHandler(
   }
   const newCoin = coin - donation;
   const newDonation = donationCounter + donation;
+  if (newCoin <= 0) {
+    alert("failed you don't have enough coin to donate");
+    button.removeAttribute("onclick", "my_modal_5.showModal()");
+    return;
+  }
   setInnerText(counterId, newDonation);
   setInnerText(totalBallanceId, newCoin);
   const title = document.getElementById(donationTitleId).innerText;
