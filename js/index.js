@@ -56,14 +56,14 @@ historyBtn.addEventListener("click", function () {
   donationCard.classList.add("hidden");
   donationBtn.classList.remove("bg-lime");
   historyList.classList.remove("hidden");
-  historyHI.classList.add("h-[60vh]");
+  historyHI.classList.add("h-[66vh]");
 });
 donationBtn.addEventListener("click", function () {
   historyBtn.classList.remove("bg-lime");
   donationBtn.classList.add("bg-lime");
   donationCard.classList.remove("hidden");
   historyList.classList.add("hidden");
-  historyHI.classList.remove("h-[60vh]");
+  historyHI.classList.remove("h-[66vh]");
 });
 document.getElementById("blog-btn").addEventListener("click", function () {
   window.location.href = "Blog.html";
