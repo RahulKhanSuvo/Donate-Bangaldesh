@@ -21,7 +21,12 @@ function evenDonationHandler(
   const coin = getValueOfSpan(totalBallanceId);
   const button = document.getElementById(btnId);
   button.setAttribute("onclick", "my_modal_5.showModal()");
-  if (isNaN(donationEl) || donation <= 0) {
+  if (isNaN(donationEl)) {
+    alert("invalid input please provide a number");
+    button.removeAttribute("onclick", "my_modal_5.showModal()");
+    return;
+  }
+  if (isNaN(donation) || donation <= 0) {
     alert("invalid input please provide a number");
     button.removeAttribute("onclick", "my_modal_5.showModal()");
     return;
