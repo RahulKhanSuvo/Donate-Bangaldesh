@@ -22,7 +22,9 @@ function evenDonationHandler(
   const button = document.getElementById(btnId);
   button.setAttribute("onclick", "my_modal_5.showModal()");
   if (isNaN(donationEl)) {
-    alert("invalid input please provide a number");
+    alert(
+      "Invalid input. Please provide a valid number without any letters or special characters."
+    );
     button.removeAttribute("onclick", "my_modal_5.showModal()");
     return;
   }
