@@ -1,5 +1,5 @@
 function getValueOfInput(id) {
-  return parseFloat(document.getElementById(id).value);
+  return document.getElementById(id).value;
 }
 function getValueOfSpan(id) {
   return parseFloat(document.getElementById(id).innerText);
@@ -15,12 +15,13 @@ function evenDonationHandler(
   donationTitleId,
   historyId
 ) {
-  const donation = getValueOfInput(inputId);
+  const donationEl = getValueOfInput(inputId);
+  const donation = parseFloat(getValueOfInput(inputId));
   const donationCounter = getValueOfSpan(counterId);
   const coin = getValueOfSpan(totalBallanceId);
   const button = document.getElementById(btnId);
   button.setAttribute("onclick", "my_modal_5.showModal()");
-  if (isNaN(donation) || donation <= 0) {
+  if (isNaN(donationEl) || donation <= 0) {
     alert("invalid input please provide a number");
     button.removeAttribute("onclick", "my_modal_5.showModal()");
     return;
